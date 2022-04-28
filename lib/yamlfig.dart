@@ -55,6 +55,6 @@ class YamlFigBuilder extends Builder {
     final emitter = DartEmitter(allocator: Allocator.simplePrefixing());
     await buildStep.writeAsString(
         buildStep.inputId.changeExtension('.config.dart'),
-        DartFormatter().format('${cls.accept(emitter)}'));
+        DartFormatter(fixes: StyleFix.all).format('${cls.accept(emitter)}'));
   }
 }
