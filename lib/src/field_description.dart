@@ -17,8 +17,8 @@ class FieldDescription {
 
     return FieldDescription._(
       name: name,
-      type: parameters['type'] as String,
-      value: _buildCode(parameters),
+      type: params['type'] as String,
+      value: _buildCode(params),
     );
   }
 
