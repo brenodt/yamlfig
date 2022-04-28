@@ -1,0 +1,6 @@
+name: ExampleApp
+
+fields:
+  font:
+    type: String
+    value: IBMPlex

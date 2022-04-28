@@ -1,0 +1,17 @@
+name: yamlfig
+description: App yaml Configuration Generator
+version: 0.0.1
+homepage: https://github.com/brenodt/yamlfig
+
+environment:
+  sdk: ">=2.16.2 <3.0.0"
+
+dependencies:
+  build: ^2.3.0
+  code_builder: ^4.1.0
+  dart_style: ^2.2.3
+  yaml: ^3.1.0
+
+dev_dependencies:
+  build_runner: ^2.1.10
+  flutter_lints: ^1.0.0

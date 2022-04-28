@@ -1,0 +1,25 @@
+targets:
+  yamlfig:
+    sources: ["lib/**"]
+  example:
+    sources: ["example/**"]
+    builders:
+      ":yamlfig":
+        generate_for: ["example/example_config.yaml"]
+  $default:
+    builders:
+      ":yamlfig":
+        enabled: true
+        generate_for: ["assets/app_config.yaml"]
+
+
+builders:
+  yamlfig:
+    target: yamlfig
+    import: "package:yamlfig/yamlfig.dart"
+    builder_factories: ["yamlfigBuilder"]
+    build_extensions: { ".yaml": [".config.dart"] }
+    auto_apply: dependents
+    build_to: source
+    defaults:
+      generate_for: ["lib/**"]
