@@ -28,6 +28,7 @@ class FieldDescription {
 
   static Code _buildCode(Map<dynamic, dynamic> parameters) {
     if (parameters['type'] == 'String') return Code('"${parameters['value']}"');
-    return Code('${parameters['value']}');
+    if (parameters['type'] == int) return Code('${parameters['value']}');
+    return Code('${parameters['type']}(${parameters['value']})');
   }
 }
